@@ -55,7 +55,7 @@
       align-items:center;
     }
     .logo{
-      width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--primary),#123a7a);
+      width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--primary),#145c2e);
       display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
     }
     .brand h1{font-size:18px}
@@ -70,7 +70,7 @@
 
     /* Hero */
     .hero{
-      background:linear-gradient(180deg, rgba(11,61,145,0.06), rgba(242,153,74,0.02));
+      background:linear-gradient(180deg, rgba(31,122,58,0.06), rgba(242,153,74,0.02));
       border-radius:var(--radius);
       padding:28px;
       display:grid;
@@ -133,7 +133,7 @@
         <div class="logo">السعيس</div>
         <div>
           <h1 id="brand-title-ar">شركة السعيس للخرسانة الجاهزة</h1>
-          <p id="brand-sub-ar">خبرة منذ 1980 — طاقة إنتاجية عالية وخدمات موثوقة</p>
+          <p id="brand-sub-ar">خبرة منذ 1980 — خدمات موثوقة</p>
         </div>
       </div>
 
@@ -147,10 +147,9 @@
     <section class="hero">
       <div class="intro">
         <h2 id="hero-title-ar">مصنع السعيس للخرسانة الجاهزة — خبرة منذ 1980</h2>
-        <p id="hero-sub-ar">نقدم خرسانة جاهزة بمواصفات عالمية، طاقة إنتاجية سنوية تصل إلى 9,000,000 م³، وفروع في الخرج، الرياض، وحائل.</p>
+        <p id="hero-sub-ar">نقدم خرسانة جاهزة بمواصفات عالمية وفروع في الخرج، الرياض، وحائل.</p>
 
         <div class="kpis" aria-hidden="true">
-          <div class="kpi"><strong>9,000,000 m³</strong><small>الطاقة الإنتاجية السنوية</small></div>
           <div class="kpi"><strong>3</strong><small>فروع</small></div>
           <div class="kpi"><strong>ISO / SASO</strong><small>شهادات واعتمادات</small></div>
         </div>
@@ -186,10 +185,9 @@
     <section>
       <div class="card">
         <h3 id="quality-title-ar">الجودة والاعتمادات</h3>
-        <p id="quality-desc-ar">نلتزم بأعلى معايير الجودة؛ ISO وSASO م.</p>
+        <p id="quality-desc-ar">نلتزم بأعلى معايير الجودة؛ شهادات ISO وSASO متاحة للتحميل عند الطلب.</p>
         <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
           <img src="certificate.jpg" alt="شهادة" style="height:80px;border-radius:8px;object-fit:cover">
-          <!-- يمكن إضافة شعارات الشهادات هنا -->
         </div>
       </div>
     </section>
@@ -232,9 +230,9 @@
     // نصوص إنجليزية مقابلة (مبسطة)
     const en = {
       brandTitle: 'Alsais Ready-Mix Company',
-      brandSub: 'Established 1980 — High capacity & trusted service',
+      brandSub: 'Established 1980 — Trusted services',
       heroTitle: 'Alsais Ready-Mix — Experience since 1980',
-      heroSub: 'We deliver ready-mix concrete to global standards. Annual capacity up to 9,000,000 m³.',
+      heroSub: 'We deliver ready-mix concrete to global standards with branches in Al Kharj, Riyadh, and Hail.',
       servicesTitle: 'Products & Services',
       s1: 'Ready-Mix Concrete',
       s1desc: 'Multiple specifications for structural and specialty concretes.',
@@ -242,7 +240,6 @@
       s2desc: 'High-quality concrete blocks and masonry products.',
       s3: 'Mobile Mixers & Transport',
       s3desc: 'Fleet ready for large projects across Saudi Arabia.',
-      projectsTitle: 'Projects',
       qualityTitle: 'Quality & Certifications',
       qualityDesc: 'We comply with ISO and SASO standards; certificates available on request.',
       contactTitle: 'Contact Us',
@@ -256,9 +253,9 @@
       toggle.textContent = 'English';
       // Arabic texts (from template)
       document.getElementById('brand-title-ar').textContent = 'شركة السعيس للخرسانة الجاهزة';
-      document.getElementById('brand-sub-ar').textContent = 'خبرة منذ 1980 — طاقة إنتاجية عالية وخدمات موثوقة';
+      document.getElementById('brand-sub-ar').textContent = 'خبرة منذ 1980 — خدمات موثوقة';
       document.getElementById('hero-title-ar').textContent = 'مصنع السعيس للخرسانة الجاهزة — خبرة منذ 1980';
-      document.getElementById('hero-sub-ar').textContent = 'نقدم خرسانة جاهزة بمواصفات عالمية، طاقة إنتاجية سنوية تصل إلى 9,000,000 م³، وفروع في الخرج، الرياض، وحائل.';
+      document.getElementById('hero-sub-ar').textContent = 'نقدم خرسانة جاهزة بمواصفات عالمية وفروع في الخرج، الرياض، وحائل.';
       document.getElementById('services-title-ar').textContent = 'خدماتنا ومنتجاتنا';
       document.getElementById('s1-ar').textContent = 'خرسانة جاهزة';
       document.getElementById('s1-desc-ar').textContent = 'مواصفات متعددة حسب المشروع: خرسانة إنشائية، خرسانة مقاومة للملوحة، خرسانة سابقة الإجهاد.';
@@ -266,7 +263,6 @@
       document.getElementById('s2-desc-ar').textContent = 'إنتاج بلك أسمنتي عالي الجودة ومطابق للمواصفات السعودية.';
       document.getElementById('s3-ar').textContent = 'خلاطات متحركة ونقل';
       document.getElementById('s3-desc-ar').textContent = 'أسطول نقل مجهز لخدمة المشاريع الكبيرة في أنحاء المملكة.';
-      document.getElementById('projects-title-ar').textContent = 'مشاريعنا';
       document.getElementById('quality-title-ar').textContent = 'الجودة والاعتمادات';
       document.getElementById('quality-desc-ar').textContent = 'نلتزم بأعلى معايير الجودة؛ شهادات ISO وSASO متاحة للتحميل عند الطلب.';
       document.getElementById('contact-title-ar').textContent = 'تواصل معنا';
@@ -289,7 +285,6 @@
       document.getElementById('s2-desc-ar').textContent = en.s2desc;
       document.getElementById('s3-ar').textContent = en.s3;
       document.getElementById('s3-desc-ar').textContent = en.s3desc;
-      document.getElementById('projects-title-ar').textContent = en.projectsTitle;
       document.getElementById('quality-title-ar').textContent = en.qualityTitle;
       document.getElementById('quality-desc-ar').textContent = en.qualityDesc;
       document.getElementById('contact-title-ar').textContent = en.contactTitle;
