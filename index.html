@@ -5,13 +5,12 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>السعيس للخرسانة الجاهزة — Alsais Ready-Mix</title>
 
-  <!-- خطوط عربية وإنجليزية -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --primary:#1F7A3A; /* أخضر صناعي */
-      --accent:#F2994A;  /* برتقالي نداء للعمل */
+      --primary:#1F7A3A;
+      --accent:#F2994A;
       --dark:#2F3E46;
       --muted:#6B7280;
       --bg:#FAFBFD;
@@ -21,291 +20,279 @@
       --gap:18px;
     }
 
-    /* Reset بسيط */
     *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
     body{
-      font-family: "Tajawal", "Inter", sans-serif;
+      font-family:"Tajawal","Inter",sans-serif;
       background:var(--bg);
       color:var(--dark);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
       line-height:1.5;
       padding:24px;
       display:flex;
       justify-content:center;
     }
 
-    .container{
-      width:100%;
-      max-width:var(--max-width);
-    }
+    .container{width:100%;max-width:var(--max-width)}
 
     header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:var(--gap);
-      margin-bottom:22px;
+      display:flex;align-items:center;justify-content:space-between;
+      gap:var(--gap);margin-bottom:22px;
     }
 
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-    }
+    .brand{display:flex;gap:12px;align-items:center}
     .logo{
-      width:64px;height:64px;border-radius:8px;background:linear-gradient(135deg,var(--primary),#145c2e);
-      display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-size:18px;
+      width:64px;height:64px;border-radius:8px;
+      background:linear-gradient(135deg,var(--primary),#145c2e);
+      display:flex;align-items:center;justify-content:center;
+      color:#fff;font-weight:700;font-size:18px;
     }
     .brand h1{font-size:18px}
     .brand p{font-size:12px;color:var(--muted)}
 
     nav{display:flex;gap:12px;align-items:center}
     .btn{
-      background:var(--accent);color:#fff;padding:10px 14px;border-radius:8px;border:none;cursor:pointer;font-weight:600;
+      background:var(--accent);color:#fff;padding:10px 14px;
+      border-radius:8px;border:none;cursor:pointer;font-weight:600;
       box-shadow:0 6px 18px rgba(242,153,74,0.18);
     }
-    .lang-toggle{background:transparent;border:1px solid #e6e9ee;padding:8px 10px;border-radius:8px;cursor:pointer}
+    .lang-toggle{
+      background:transparent;border:1px solid #e6e9ee;
+      padding:8px 10px;border-radius:8px;cursor:pointer;
+    }
 
-    /* Hero */
     .hero{
-      background:linear-gradient(180deg, rgba(31,122,58,0.06), rgba(242,153,74,0.02));
-      border-radius:var(--radius);
-      padding:28px;
-      display:grid;
-      grid-template-columns:1fr 420px;
-      gap:20px;
-      align-items:center;
-      margin-bottom:20px;
+      background:linear-gradient(180deg,rgba(31,122,58,0.06),rgba(242,153,74,0.02));
+      border-radius:var(--radius);padding:28px;
+      display:grid;grid-template-columns:1fr 420px;
+      gap:20px;align-items:center;margin-bottom:20px;
     }
     .hero .intro h2{font-size:28px;color:var(--primary);margin-bottom:8px}
     .hero .intro p{color:var(--muted);margin-bottom:14px}
+
     .kpis{display:flex;gap:12px;flex-wrap:wrap}
-    .kpi{background:var(--card);padding:12px;border-radius:10px;min-width:140px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .kpi{
+      background:var(--card);padding:12px;border-radius:10px;
+      min-width:140px;box-shadow:0 6px 18px rgba(15,23,42,0.04)
+    }
     .kpi strong{display:block;color:var(--primary);font-size:18px}
-    .hero .visual{border-radius:8px;overflow:hidden;height:260px;background:#ddd;display:flex;align-items:center;justify-content:center}
-    .hero .visual img{width:100%;height:100%;object-fit:cover;display:block}
 
-    /* Sections */
+    .hero .visual{
+      border-radius:8px;overflow:hidden;height:260px;
+      background:#ddd;display:flex;align-items:center;justify-content:center;
+    }
+    .hero .visual img{width:100%;height:100%;object-fit:cover}
+
     section{margin-bottom:20px}
-    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,42,0.04)}
+    .card{
+      background:var(--card);padding:18px;border-radius:12px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.04)
+    }
     h3{color:var(--primary);margin-bottom:10px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .service{padding:14px;border-radius:10px;background:linear-gradient(180deg,#fff,#fbfdff);border:1px solid #eef2ff}
-    .service h4{margin-bottom:6px}
-    .gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:8px}
 
-    /* Contact */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .service{
+      padding:14px;border-radius:10px;
+      background:linear-gradient(180deg,#fff,#fbfdff);
+      border:1px solid #eef2ff;
+    }
+    .service h4{margin-bottom:6px}
+
     .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:14px}
     .contact-card p{margin-bottom:8px}
     .contact-form input,.contact-form textarea{
-      width:100%;padding:10px;border-radius:8px;border:1px solid #e6e9ee;margin-bottom:10px;font-family:inherit
+      width:100%;padding:10px;border-radius:8px;
+      border:1px solid #e6e9ee;margin-bottom:10px;font-family:inherit;
     }
 
-    footer{margin-top:18px;padding:14px;text-align:center;color:var(--muted);font-size:14px}
+    footer{
+      margin-top:18px;padding:14px;text-align:center;
+      color:var(--muted);font-size:14px;
+    }
 
-    /* Responsive */
-    @media (max-width:980px){
+    @media(max-width:980px){
       .hero{grid-template-columns:1fr}
       .grid{grid-template-columns:repeat(2,1fr)}
-      .gallery{grid-template-columns:repeat(2,1fr)}
       .contact-grid{grid-template-columns:1fr}
     }
-    @media (max-width:520px){
+    @media(max-width:520px){
       .grid{grid-template-columns:1fr}
-      .gallery{grid-template-columns:1fr}
     }
 
-    /* RTL / LTR handling */
-    [dir="rtl"] .brand p{direction:rtl}
-    [dir="ltr"] body{font-family:Inter, "Tajawal", sans-serif}
+    [dir="ltr"] body{font-family:Inter,"Tajawal",sans-serif}
     [dir="ltr"] .hero{grid-template-columns:420px 1fr}
     [dir="ltr"] .brand{flex-direction:row-reverse}
     [dir="ltr"] .logo{order:2}
   </style>
 </head>
+
 <body>
-  <div class="container" id="page">
-    <header>
-      <div class="brand">
-        <div class="logo">السعيس</div>
-        <div>
-          <h1 id="brand-title-ar">شركة السعيس للخرسانة الجاهزة</h1>
-          <p id="brand-sub-ar">خبرة منذ 1980 — خدمات موثوقة</p>
-        </div>
+<div class="container" id="page">
+
+  <header>
+    <div class="brand">
+      <div class="logo">السعيس</div>
+      <div>
+        <h1 id="brand-title-ar">شركة السعيس للخرسانة الجاهزة</h1>
+        <p id="brand-sub-ar">خدمات موثوقة وجودة عالية</p>
+      </div>
+    </div>
+
+    <nav>
+      <button class="lang-toggle" id="toggleLang">English</button>
+      <button class="btn" id="quoteBtn">اطلب عرض سعر</button>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="intro">
+      <h2 id="hero-title-ar">مصنع السعيس للخرسانة الجاهزة</h2>
+      <p id="hero-sub-ar">نقدم خرسانة جاهزة بمواصفات عالمية وفروع في الخرج، الرياض، وحائل.</p>
+
+      <div class="kpis">
+        <div class="kpi"><strong>3</strong><small>فروع</small></div>
+        <div class="kpi"><strong>ISO / SASO</strong><small>شهادات واعتمادات</small></div>
+      </div>
+    </div>
+
+    <div class="visual card">
+      <img id="img-hero" src="hero.jpg" alt="مصنع السعيس">
+    </div>
+  </section>
+
+  <section class="card">
+    <h3 id="services-title-ar">خدماتنا ومنتجاتنا</h3>
+    <div class="grid">
+      <div class="service">
+        <h4 id="s1-ar">خرسانة جاهزة</h4>
+        <p id="s1-desc-ar">مواصفات متعددة حسب المشروع: إنشائية، مقاومة للملوحة، سابقة الإجهاد.</p>
+      </div>
+      <div class="service">
+        <h4 id="s2-ar">بلك وأسمنت</h4>
+        <p id="s2-desc-ar">إنتاج بلك أسمنتي عالي الجودة ومطابق للمواصفات السعودية.</p>
+      </div>
+      <div class="service">
+        <h4 id="s3-ar">خلاطات متحركة ونقل</h4>
+        <p id="s3-desc-ar">أسطول نقل مجهز لخدمة المشاريع الكبيرة في أنحاء المملكة.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card">
+      <h3 id="quality-title-ar">الجودة والاعتمادات</h3>
+      <p id="quality-desc-ar">نلتزم بأعلى معايير الجودة؛ شهادات ISO وSASO متاحة عند الطلب.</p>
+      <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
+        <img src="certificate.jpg" alt="شهادة" style="height:80px;border-radius:8px;object-fit:cover">
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="card contact-grid">
+      <div class="contact-card">
+        <h3 id="contact-title-ar">تواصل معنا</h3>
+        <p><strong>المركز الرئيسي:</strong> الخرج — طريق حرض</p>
+        <p><strong>هاتف:</strong> 0535229977 / 0535229988</p>
+        <p><strong>البريد الإلكتروني:</strong> admin@alsoais.com</p>
+        <p><strong>فروع:</strong> الرياض (ملهم) — حائل — الصناعية الخرج</p>
       </div>
 
-      <nav>
-        <button class="lang-toggle" id="toggleLang">English</button>
-        <button class="btn" id="quoteBtn">اطلب عرض سعر</button>
-      </nav>
-    </header>
-
-    <!-- HERO -->
-    <section class="hero">
-      <div class="intro">
-        <h2 id="hero-title-ar">مصنع السعيس للخرسانة الجاهزة — خبرة منذ 1980</h2>
-        <p id="hero-sub-ar">نقدم خرسانة جاهزة بمواصفات عالمية وفروع في الخرج، الرياض، وحائل.</p>
-
-        <div class="kpis" aria-hidden="true">
-          <div class="kpi"><strong>3</strong><small>فروع</small></div>
-          <div class="kpi"><strong>ISO / SASO</strong><small>شهادات واعتمادات</small></div>
-        </div>
+      <div class="contact-form">
+        <form id="quoteForm" onsubmit="event.preventDefault(); alert(currentLang==='ar'?'تم إرسال الطلب':'Request sent');">
+          <input type="text" id="name" placeholder="الاسم / Name" required>
+          <input type="text" id="company" placeholder="اسم الشركة / Company (optional)">
+          <input type="tel" id="phone" placeholder="الهاتف / Phone" required>
+          <input type="email" id="email" placeholder="البريد الإلكتروني / Email" required>
+          <textarea id="message" rows="4" placeholder="تفاصيل الطلب / Project details"></textarea>
+          <button class="btn" type="submit" id="submitBtn">اطلب عرض سعر / Request Quote</button>
+        </form>
       </div>
+    </div>
+  </section>
 
-      <div class="visual card">
-        <!-- استبدل اسم الملف هنا باسم صورة الهيرو لديك -->
-        <!-- مثال: hero.jpg -->
-        <img id="img-hero" src="hero.jpg" alt="مصنع السعيس">
-      </div>
-    </section>
+  <footer>
+    © <span id="year"></span> شركة عبدالعزيز وعبدالله محمد السعيس — جميع الحقوق محفوظة
+  </footer>
 
-    <!-- الخدمات -->
-    <section class="card">
-      <h3 id="services-title-ar">خدماتنا ومنتجاتنا</h3>
-      <div class="grid" id="services">
-        <div class="service">
-          <h4 id="s1-ar">خرسانة جاهزة</h4>
-          <p id="s1-desc-ar">مواصفات متعددة حسب المشروع: خرسانة إنشائية، خرسانة مقاومة للملوحة، خرسانة سابقة الإجهاد.</p>
-        </div>
-        <div class="service">
-          <h4 id="s2-ar">بلك وأسمنت</h4>
-          <p id="s2-desc-ar">إنتاج بلك أسمنتي عالي الجودة ومطابق للمواصفات السعودية.</p>
-        </div>
-        <div class="service">
-          <h4 id="s3-ar">خلاطات متحركة ونقل</h4>
-          <p id="s3-desc-ar">أسطول نقل مجهز لخدمة المشاريع الكبيرة في أنحاء المملكة.</p>
-        </div>
-      </div>
-    </section>
+</div>
 
-    <!-- الجودة والشهادات -->
-    <section>
-      <div class="card">
-        <h3 id="quality-title-ar">الجودة والاعتمادات</h3>
-        <p id="quality-desc-ar">نلتزم بأعلى معايير الجودة؛ شهادات ISO وSASO متاحة للتحميل عند الطلب.</p>
-        <div style="margin-top:12px;display:flex;gap:10px;flex-wrap:wrap">
-          <img src="certificate.jpg" alt="شهادة" style="height:80px;border-radius:8px;object-fit:cover">
-        </div>
-      </div>
-    </section>
+<script>
+  const toggle=document.getElementById('toggleLang');
+  let currentLang='ar';
 
-    <!-- تواصل -->
-    <section>
-      <div class="card contact-grid">
-        <div class="contact-card">
-          <h3 id="contact-title-ar">تواصل معنا</h3>
-          <p><strong>المركز الرئيسي:</strong> الخرج — طريق حرض</p>
-          <p><strong>هاتف:</strong> 0535229977 / 0535229988</p>
-          <p><strong>البريد الإلكتروني:</strong> admin@alsoais.com</p>
-          <p><strong>فروع:</strong> الرياض (ملهم) — حائل — الصناعية الخرج</p>
-        </div>
+  const en={
+    brandTitle:'Alsais Ready-Mix Company',
+    brandSub:'High quality & trusted services',
+    heroTitle:'Alsais Ready-Mix',
+    heroSub:'We deliver ready-mix concrete with branches in Al Kharj, Riyadh, and Hail.',
+    servicesTitle:'Products & Services',
+    s1:'Ready-Mix Concrete',
+    s1desc:'Multiple specifications for structural and specialty concretes.',
+    s2:'Blocks & Masonry',
+    s2desc:'High-quality concrete blocks and masonry products.',
+    s3:'Mobile Mixers & Transport',
+    s3desc:'Fleet ready for large projects across Saudi Arabia.',
+    qualityTitle:'Quality & Certifications',
+    qualityDesc:'We comply with ISO and SASO standards.',
+    contactTitle:'Contact Us',
+    submitBtn:'Request Quote'
+  };
 
-        <div class="contact-form">
-          <form id="quoteForm" onsubmit="event.preventDefault(); alert(currentLang==='ar' ? 'تم إرسال الطلب — سنتواصل معك' : 'Request sent — we will contact you');">
-            <input type="text" id="name" placeholder="الاسم / Name" required>
-            <input type="text" id="company" placeholder="اسم الشركة / Company (optional)">
-            <input type="tel" id="phone" placeholder="الهاتف / Phone" required>
-            <input type="email" id="email" placeholder="البريد الإلكتروني / Email" required>
-            <textarea id="message" rows="4" placeholder="تفاصيل الطلب / Project details"></textarea>
-            <button class="btn" type="submit" id="submitBtn">اطلب عرض سعر / Request Quote</button>
-          </form>
-        </div>
-      </div>
-    </section>
+  function setArabic(){
+    document.documentElement.lang='ar';
+    document.documentElement.dir='rtl';
+    currentLang='ar';
+    toggle.textContent='English';
 
-    <footer>
-      © <span id="year"></span> شركة عبدالعزيز وعبدالله محمد السعيس — جميع الحقوق محفوظة
-    </footer>
-  </div>
+    document.getElementById('brand-title-ar').textContent='شركة السعيس للخرسانة الجاهزة';
+    document.getElementById('brand-sub-ar').textContent='خدمات موثوقة وجودة عالية';
+    document.getElementById('hero-title-ar').textContent='مصنع السعيس للخرسانة الجاهزة';
+    document.getElementById('hero-sub-ar').textContent='نقدم خرسانة جاهزة بمواصفات عالمية وفروع في الخرج، الرياض، وحائل.';
+    document.getElementById('services-title-ar').textContent='خدماتنا ومنتجاتنا';
+    document.getElementById('s1-ar').textContent='خرسانة جاهزة';
+    document.getElementById('s1-desc-ar').textContent='مواصفات متعددة حسب المشروع: إنشائية، مقاومة للملوحة، سابقة الإجهاد.';
+    document.getElementById('s2-ar').textContent='بلك وأسمنت';
+    document.getElementById('s2-desc-ar').textContent='إنتاج بلك أسمنتي عالي الجودة ومطابق للمواصفات السعودية.';
+    document.getElementById('s3-ar').textContent='خلاطات متحركة ونقل';
+    document.getElementById('s3-desc-ar').textContent='أسطول نقل مجهز لخدمة المشاريع الكبيرة في أنحاء المملكة.';
+    document.getElementById('quality-title-ar').textContent='الجودة والاعتمادات';
+    document.getElementById('quality-desc-ar').textContent='نلتزم بأعلى معايير الجودة؛ شهادات ISO وSASO متاحة عند الطلب.';
+    document.getElementById('contact-title-ar').textContent='تواصل معنا';
+    document.getElementById('submitBtn').textContent='اطلب عرض سعر / Request Quote';
+  }
 
-  <script>
-    /* إعدادات اللغة وتبديل الاتجاه */
-    const toggle = document.getElementById('toggleLang');
-    const page = document.getElementById('page').closest('html');
-    let currentLang = 'ar'; // 'ar' أو 'en'
+  function setEnglish(){
+    document.documentElement.lang='en';
+    document.documentElement.dir='ltr';
+    currentLang='en';
+    toggle.textContent='العربية';
 
-    // نصوص إنجليزية مقابلة (مبسطة)
-    const en = {
-      brandTitle: 'Alsais Ready-Mix Company',
-      brandSub: 'Established 1980 — Trusted services',
-      heroTitle: 'Alsais Ready-Mix — Experience since 1980',
-      heroSub: 'We deliver ready-mix concrete to global standards with branches in Al Kharj, Riyadh, and Hail.',
-      servicesTitle: 'Products & Services',
-      s1: 'Ready-Mix Concrete',
-      s1desc: 'Multiple specifications for structural and specialty concretes.',
-      s2: 'Blocks & Masonry',
-      s2desc: 'High-quality concrete blocks and masonry products.',
-      s3: 'Mobile Mixers & Transport',
-      s3desc: 'Fleet ready for large projects across Saudi Arabia.',
-      qualityTitle: 'Quality & Certifications',
-      qualityDesc: 'We comply with ISO and SASO standards; certificates available on request.',
-      contactTitle: 'Contact Us',
-      submitBtn: 'Request Quote'
-    };
+    document.getElementById('brand-title-ar').textContent=en.brandTitle;
+    document.getElementById('brand-sub-ar').textContent=en.brandSub;
+    document.getElementById('hero-title-ar').textContent=en.heroTitle;
+    document.getElementById('hero-sub-ar').textContent=en.heroSub;
+    document.getElementById('services-title-ar').textContent=en.servicesTitle;
+    document.getElementById('s1-ar').textContent=en.s1;
+    document.getElementById('s1-desc-ar').textContent=en.s1desc;
+    document.getElementById('s2-ar').textContent=en.s2;
+    document.getElementById('s2-desc-ar').textContent=en.s2desc;
+    document.getElementById('s3-ar').textContent=en.s3;
+    document.getElementById('s3-desc-ar').textContent=en.s3desc;
+    document.getElementById('quality-title-ar').textContent=en.qualityTitle;
+    document.getElementById('quality-desc-ar').textContent=en.qualityDesc;
+    document.getElementById('contact-title-ar').textContent=en.contactTitle;
+    document.getElementById('submitBtn').textContent=en.submitBtn;
+  }
 
-    function setArabic(){
-      document.documentElement.lang = 'ar';
-      document.documentElement.dir = 'rtl';
-      currentLang = 'ar';
-      toggle.textContent = 'English';
-      // Arabic texts (from template)
-      document.getElementById('brand-title-ar').textContent = 'شركة السعيس للخرسانة الجاهزة';
-      document.getElementById('brand-sub-ar').textContent = 'خبرة منذ 1980 — خدمات موثوقة';
-      document.getElementById('hero-title-ar').textContent = 'مصنع السعيس للخرسانة الجاهزة — خبرة منذ 1980';
-      document.getElementById('hero-sub-ar').textContent = 'نقدم خرسانة جاهزة بمواصفات عالمية وفروع في الخرج، الرياض، وحائل.';
-      document.getElementById('services-title-ar').textContent = 'خدماتنا ومنتجاتنا';
-      document.getElementById('s1-ar').textContent = 'خرسانة جاهزة';
-      document.getElementById('s1-desc-ar').textContent = 'مواصفات متعددة حسب المشروع: خرسانة إنشائية، خرسانة مقاومة للملوحة، خرسانة سابقة الإجهاد.';
-      document.getElementById('s2-ar').textContent = 'بلك وأسمنت';
-      document.getElementById('s2-desc-ar').textContent = 'إنتاج بلك أسمنتي عالي الجودة ومطابق للمواصفات السعودية.';
-      document.getElementById('s3-ar').textContent = 'خلاطات متحركة ونقل';
-      document.getElementById('s3-desc-ar').textContent = 'أسطول نقل مجهز لخدمة المشاريع الكبيرة في أنحاء المملكة.';
-      document.getElementById('quality-title-ar').textContent = 'الجودة والاعتمادات';
-      document.getElementById('quality-desc-ar').textContent = 'نلتزم بأعلى معايير الجودة؛ شهادات ISO وSASO متاحة للتحميل عند الطلب.';
-      document.getElementById('contact-title-ar').textContent = 'تواصل معنا';
-      document.getElementById('submitBtn').textContent = 'اطلب عرض سعر / Request Quote';
-    }
+  toggle.addEventListener('click',()=>{currentLang==='ar'?setEnglish():setArabic()});
+  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('quoteBtn').addEventListener('click',()=>{
+    document.getElementById('name').focus();
+    window.scrollTo({top:document.getElementById('quoteForm').offsetTop-80,behavior:'smooth'});
+  });
 
-    function setEnglish(){
-      document.documentElement.lang = 'en';
-      document.documentElement.dir = 'ltr';
-      currentLang = 'en';
-      toggle.textContent = 'العربية';
-      document.getElementById('brand-title-ar').textContent = en.brandTitle;
-      document.getElementById('brand-sub-ar').textContent = en.brandSub;
-      document.getElementById('hero-title-ar').textContent = en.heroTitle;
-      document.getElementById('hero-sub-ar').textContent = en.heroSub;
-      document.getElementById('services-title-ar').textContent = en.servicesTitle;
-      document.getElementById('s1-ar').textContent = en.s1;
-      document.getElementById('s1-desc-ar').textContent = en.s1desc;
-      document.getElementById('s2-ar').textContent = en.s2;
-      document.getElementById('s2-desc-ar').textContent = en.s2desc;
-      document.getElementById('s3-ar').textContent = en.s3;
-      document.getElementById('s3-desc-ar').textContent = en.s3desc;
-      document.getElementById('quality-title-ar').textContent = en.qualityTitle;
-      document.getElementById('quality-desc-ar').textContent = en.qualityDesc;
-      document.getElementById('contact-title-ar').textContent = en.contactTitle;
-      document.getElementById('submitBtn').textContent = en.submitBtn;
-    }
+  setArabic();
+</script>
 
-    toggle.addEventListener('click', ()=>{
-      if(currentLang==='ar') setEnglish(); else setArabic();
-    });
-
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Quick CTA scroll
-    document.getElementById('quoteBtn').addEventListener('click', ()=>{
-      document.getElementById('name').focus();
-      window.scrollTo({top: document.getElementById('quoteForm').offsetTop - 80, behavior:'smooth'});
-    });
-
-    // Default Arabic
-    setArabic();
-  </script>
 </body>
 </html>
